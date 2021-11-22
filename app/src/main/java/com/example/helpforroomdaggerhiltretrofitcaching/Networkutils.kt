@@ -57,7 +57,6 @@ private fun getCurrentConnectivityState(connectivityManager: ConnectivityManager
             ?.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
             ?: false
     }
-
     return if (connected) ConnectionState.Available else ConnectionState.Unavailable
 }
 

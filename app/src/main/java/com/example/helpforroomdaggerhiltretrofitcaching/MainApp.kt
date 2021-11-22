@@ -28,10 +28,9 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 fun MainApp(viewModelMainApp: ViewModelMainApp = hiltViewModel()) {
 
     val connection by connectivityState()
-    Log.d("isConnected", connection.toString())
-
     val isConnected = connection === ConnectionState.Available
     Log.d("isConnected", isConnected.toString())
+
 
 
     var postlist by remember { viewModelMainApp.Mainlist }
@@ -49,6 +48,8 @@ fun MainApp(viewModelMainApp: ViewModelMainApp = hiltViewModel()) {
 
 
 }
+
+
 
 @Composable
 fun ConnectivityStatusBox(isConnected: Boolean) {
