@@ -30,6 +30,10 @@ class ViewModelMainApp @Inject constructor(private val localRepository: LocalRep
                // Log.d("kk",item.toString())
                 Mainlist.value += Post(item.id,item.userId,item.title,item.body)
             }
+
+            //handling errors needed
+
+            var newitem :String
         }
 
     }
